@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style2.css">
+</head>
+<body>
+    <video id="background-video" autoplay loop muted >
+        <source src="./35506-405897842_small.mp4" type="video/mp4">
+      </video>
+    <div class="border">
+        <form>
+         <h1>CREATE ACCOUNT </h1>
+         
+         <input type="first" class="firstname" placeholder="FIRT NAME">
+         <input type="last" class="lastname" placeholder="LAST NAME">
+         <input type="user" class="username" placeholder="USERNAME">
+         <input type="pass"  class="password" placeholder="PASSWORD">
+         <input type="confirm" class="confirmpassword"  placeholder="CONFIRM PASSWORD">
+         
+
+         <button type="submit" class="button">CREATE </button>
+          <a href="./index.html">i have already account </a>
+ 
+        </form> 
+        
+ 
+ 
+ 
+     </div>
+     <!-- <script >
+      let getfirst=document.getElementsByClassName("firstname")
+      let getlast=document.getElementsByClassName("lastname")
+      let getuser=document.getElementsByClassName("username")
+      let getpass=document.getElementsByClassName("password")
+      let getconfirm=document.getElementsByClassName("confirmpassword")
+       let getbtn=document.getElementsByClassName("button")
+
+                let getform=document.getElementsByTagName("form")
+
+        getform[0].addEventListener("submit",(vamsi)=>{
+    vamsi.preventDefault()
+    console.log(getfirst[0].value)
+    
+    
+    
+    localStorage.setItem("firstname",getfirst[0].value) 
+    localStorage.setItem("lastname",getlast[0].value)
+    localStorage.setItem("username",getuser[0].value)
+    localStorage.setItem("password",getpass[0].value)
+    localStorage.setItem("confirmpassword",getconfirm[0].value)
+})
+
+     </script> -->
+     <script>
+        let getfirst = document.getElementsByClassName("firstname");
+let getlast = document.getElementsByClassName("lastname");
+let getuser = document.getElementsByClassName("username");
+let getpass = document.getElementsByClassName("password");
+let getconfirm = document.getElementsByClassName("confirmpassword");
+let getbtn = document.getElementsByClassName("button");
+
+let getform = document.getElementsByTagName("form");
+
+getform[0].addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    // Retrieve existing data from local storage or initialize an empty array
+    let userData = JSON.parse(localStorage.getItem("userData")) || [];
+
+    // Create a new user object
+    let newUser = {
+        firstname: getfirst[0].value,
+        lastname: getlast[0].value,
+        username: getuser[0].value,
+        password: getpass[0].value,
+        confirmpassword: getconfirm[0].value
+    };
+
+    // Add the new user object to the array
+    userData.push(newUser);
+
+    // Save the updated array back to local storage
+    localStorage.setItem("userData", JSON.stringify(userData));
+});
+
+     </script>
+</body>
+</html>

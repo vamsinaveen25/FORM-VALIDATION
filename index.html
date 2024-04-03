@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <video id="background-video" autoplay loop muted>
+      <source src="./2025634-hd_1280_720_25fps.mp4" type="video/mp4" />
+    </video>
+
+    <div class="border">
+      <form>
+        <h1>LOG IN</h1>
+        <label>USERNAME</label>
+        <input type="text" class="user" placeholder="ENETER USERNAME" />
+        <label>PASSWORD</label>
+        <input type="password1" class="password" placeholder="ENTER PASSWORD" />
+        <button type="submit" class="button">SUBMIT</button>
+        <a href="./index1.html">create an account.?</a>
+      </form>
+    </div>
+  
+    <script>
+      let gettext = document.getElementsByClassName("user");
+let getpass = document.getElementsByClassName("password");
+let getbtn = document.getElementsByClassName("button");
+let getform = document.getElementsByTagName("form");
+
+getform[0].addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    // Check if both username and password fields exist
+    if (gettext.length > 0 && getpass.length > 0) {
+        // Retrieve existing data from local storage or initialize an empty array
+        let userData = JSON.parse(localStorage.getItem("userData")) || [];
+
+        // Create a new user object
+        let newUser = {
+            username: gettext[0].value,
+            password: getpass[0].value
+        };
+
+        // Add the new user object to the array
+        userData.push(newUser);
+
+        // Save the updated array back to local storage
+        localStorage.setItem("userData", JSON.stringify(userData));
+
+        console.log("Username:", newUser.username);
+        console.log("Password:", newUser.password);
+    } else {
+        console.log("Username or password field does not exist.");
+    }
+});
+
+    </script>
+  </body>
+</html>

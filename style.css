@@ -1,0 +1,85 @@
+
+.border{
+   
+    height: 35rem;
+    width: 25rem;
+    border-top-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    border: 2px solid white;
+    position: relative;
+    left: 600px;
+    top: 50px;
+    display: flex;
+
+    
+    /* background:url(./geometric-gradient-futuristic-background_23-2149116406.avif) */
+
+    
+
+}
+form{
+    display: block;
+    box-sizing: border-box;
+    padding: 40px;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    display: flex;
+    gap: 9px;
+    
+}
+h1{
+    margin-bottom: 80px;
+    color: white;
+}
+label{
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 2px;
+    padding-left: 10px;
+    color: white;
+}
+input{
+    height: 40px;
+    line-height: 40px;
+    border-radius: 15px;
+    padding: 0px 20px;
+    margin-bottom: 20px;
+    color: rgb(24, 20, 20);
+ 
+}
+button{
+    background-color: rgb(36, 206, 192);
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    margin-bottom: 50px;
+    cursor: pointer;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: larger;
+}
+a{
+    color: white;
+    font-size: larger;
+    margin-left: 90px;
+    margin-top: -20px;
+}
+#background-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  
+  
+  
+
+
+
+
+
